@@ -33,7 +33,7 @@ jspm registry create bower jspm-bower-endpoint
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <script>
-  System.import('app.js');
+  System.import('app');
 </script>
 ````
 
