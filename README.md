@@ -61,7 +61,13 @@ gulp.task('browser-sync', function() {
 });
 ````
 
-
+###Backbone###
+####Install Backbone and Dependencies####
+````
+jspm install bower:jquery
+jspm install bower:underscore
+jspm install bower:backbone
+````
 
 
   
