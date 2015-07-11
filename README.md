@@ -46,13 +46,23 @@ npm install gulp -g
 npm install gulp --save-dev
 npm install browser-sync --save-dev
 ```
+####Setup Gulpfile####
+````javascript
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
 
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+````
 
 
 
 
   
 ##Steps to Run##
-Install jspm CLI: https://github.com/jspm/jspm-cli/wiki/Getting-Started
-
-`npm install jspm -g`
