@@ -9,7 +9,8 @@ System.config({
   "paths": {
     "*": "*.js",
     "github:*": "libs/github/*.js",
-    "npm:*": "libs/npm/*.js"
+    "npm:*": "libs/npm/*.js",
+    "bower:*": "libs/bower/*.js"
   }
 });
 
@@ -17,8 +18,18 @@ System.config({
   "map": {
     "babel": "npm:babel-core@5.6.17",
     "babel-runtime": "npm:babel-runtime@5.6.17",
+    "backbone": "bower:backbone@1.2.1",
+    "backbone.localStorage": "bower:backbone.localStorage@1.1.16",
     "core-js": "npm:core-js@0.9.18",
     "gulp": "npm:gulp@3.9.0",
+    "jquery": "bower:jquery@2.1.4",
+    "underscore": "bower:underscore@1.8.3",
+    "bower:backbone.localStorage@1.1.16": {
+      "backbone": "bower:backbone@1.2.1"
+    },
+    "bower:backbone@1.2.1": {
+      "underscore": "bower:underscore@1.8.3"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
