@@ -30,10 +30,10 @@ jspm registry create bower jspm-bower-endpoint
 ####Setup Index File####
 ````html
 <!doctype html>
-<script src="jspm_packages/system.js"></script>
+<script src="libs/system.js"></script>
 <script src="config.js"></script>
 <script>
-  System.import('app');
+    System.import("app");
 </script>
 ````
 
@@ -69,6 +69,26 @@ jspm install bower:underscore
 jspm install bower:backbone
 ````
 
+####Setup Application####
+````javascript
+'use strict';
+import $ from "jquery";
+import _ from "underscore";
+import Backbone from "backbone";
+import Router from './router';
+
+class Application {
+
+    constructor () {
+        new Router();
+        Backbone.history.start();
+    }
+}
+
+$(() => {
+    new Application();
+});
+````
 
   
 ##Steps to Run##
